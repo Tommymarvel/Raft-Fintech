@@ -1,0 +1,29 @@
+* {
+  background-color: #070606;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+$small-screen: 640px;
+$medium-screen: 641px;
+$large-screen: 1024px;
+
+// Import mobile styles for screens up to 640px
+@media (max-width: $small-screen) {
+  @import 'mobile';
+}
+
+// Import tablet styles for screens between 640px and 1024px
+@media (min-width: $small-screen) and (max-width: $large-screen) {
+  @import 'tablet';
+}
+
+// Import large screen styles for screens above 1024px
+@media (min-width: $large-screen) {
+  @import 'large';
+}
