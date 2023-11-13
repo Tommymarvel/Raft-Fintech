@@ -6,6 +6,7 @@ import Framebig1 from '../assets/images/Frame 88.png';
 import Framebig2 from '../assets/images/Frame 32.png';
 import Framebig3 from '../assets/images/Frame 34.png';
 import Framebig4 from '../assets/images/Frame 36.png';
+import Cards from './Cards';
 
 
 const Elevatepage = () => {
@@ -20,12 +21,13 @@ const Elevatepage = () => {
         payments,  we&rsquo;ve got you covered. Join us and unlock your
         financial potential today.
       </p>
-      <div className="frames">
+      < Cards />
+      {/* <div className="frames">
         <img src={Frame1} alt="seamless payment" />
         <img src={Frame2} alt="smart investing" />
         <img src={Frame3} alt="wealth management" />
         <img src={Frame4} alt="financial planning" />
-      </div>
+      </div> */}
       <div className="framesbig">
         <img src={Framebig1} alt="seamless payment" />
         <img src={Framebig2} alt="smart investing" />
