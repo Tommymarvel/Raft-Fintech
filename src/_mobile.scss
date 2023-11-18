@@ -159,7 +159,6 @@ $large-screen: 1024px;
       display: flex;
       align-items: center;
       flex-direction: column;
-      height: 395px;
       border: #ffffff0a solid 1px;
       margin: 80px 24px 32px 24px;
       background: linear-gradient(
@@ -168,6 +167,8 @@ $large-screen: 1024px;
         ),
         linear-gradient(90deg, rgba(255, 255, 255, 1) 0.5px, transparent 0.5px);
       background-size: 20px 20px; /* Adjust the size as needed */
+      border-radius: 8px;
+      border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
 
       .tests {
         margin-top: 34px;
@@ -330,6 +331,117 @@ $large-screen: 1024px;
         }
       }
     }
+
+    .card3 {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
+      max-height: 395px;
+      gap: 30px;
+      margin: 24px 32px;
+
+      .perk {
+        border-radius: 8px;
+        border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
+
+        position: relative;
+        margin: 30px 24px 0 24px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, transparent 5%, #20202091 100%);
+          z-index: 1; /* Ensure the overlay is above other content */
+        }
+
+        .sendMessage {
+          padding-top: 20px;
+          color: #989898;
+        }
+        .testimony {
+          display: flex;
+          flex-direction: row;
+          gap: 14px;
+          margin: 20px 0 10px 13px;
+
+          img {
+            width: 48.729px;
+            height: 48.729px;
+          }
+
+          p {
+            color: #989898;
+            font-size: 16px;
+            font-style: normal;
+          }
+        }
+      }
+
+      .info {
+        margin: 5px 24px 24px 24px;
+        background-color: #030201;
+
+        p {
+          margin-top: 16px;
+          background: inherit;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        h4 {
+          color: var(--White, #fff);
+          font-size: 24px;
+          font-weight: 700;
+          font-style: normal;
+        }
+      }
+    }
+
+    .card4 {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
+      max-height: auto;
+      gap: 30px;
+      margin: 24px 32px;
+
+      .perk {
+        border-radius: 8px;
+        border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
+
+        img {
+          max-width: 100%;
+          object-fit: cover;
+          height: auto;
+        }
+      }
+
+      .info {
+        margin: 5px 24px 24px 24px;
+        background-color: #030201;
+        height: auto;
+
+        p {
+          margin-top: 16px;
+          background: inherit;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        h4 {
+          color: var(--White, #fff);
+          font-size: 24px;
+          font-weight: 700;
+          font-style: normal;
+        }
+      }
+    }
   }
 
   .financial-page {
@@ -438,17 +550,45 @@ $large-screen: 1024px;
     .benefitimage {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin: 80px 10px;
-      gap: 32px;
+      margin: 80px 24px 32px 24px;
+      gap: 20px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+        max-height: auto;
+        border-radius: 12px;
+        border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
+        background: #131313;
+      }
 
       img {
         max-width: 100%;
-        max-height: 100%;
+        max-height: auto;
       }
 
-      .desktop {
-        display: none;
+      h3 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+        color: var(--White, #fff);
+        background-color: inherit;
+        margin: 24px 24px;
+        height: auto;
+      }
+
+      p {
+        color: #bdbdbd;
+        background-color: inherit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        height: auto;
+        margin: 0 24px 24px 24px;
       }
     }
   }
@@ -555,20 +695,91 @@ $large-screen: 1024px;
       }
     }
 
+    .profileDesktop {
+      display: none;
+    }
+
     .green {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 80px 0;
+      max-height: auto;
       width: 100%;
+      background: #48d64c;
+      padding: 32px 24px;
 
-      .desktop {
-        display: none;
+      h3 {
+        color: var(--Background, #070606);
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: inherit;
+        margin-top: 30px;
       }
 
-      img {
+      p {
+        margin: 64px 32px 24px 32px;
+        color: #292929;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        background-color: inherit;
+      }
+
+      .profile {
+        display: flex;
+        background-color: inherit;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        max-height: 100%;
+
+        span {
+          background-color: inherit;
+        }
+        p {
+          color: #292929;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin: 0;
+          margin-left: 32px;
+        }
+        h3 {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          color: var(--Background, #070606);
+          margin-left: 32px;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          background-color: inherit;
+          margin-right: 32px;
+        }
+      }
+
+      .bottomArrow {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+        background-color: #48d64c;
+        width: 100%;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-top: 24px;
+          border-radius: 100px;
+          border: 1px solid #000;
+          background: #fff;
+        }
       }
     }
   }

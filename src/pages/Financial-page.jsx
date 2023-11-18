@@ -3,12 +3,12 @@ import FinImageBig from '../assets/images/Frame 1000001580-big.png';
 import BankNotes from '../assets/images/banknotes.svg';
 import CircleStack from '../assets/images/circle-stack.svg';
 import ArrowLeftRight from '../assets/images/arrows-right-left.svg';
-import SpendBetter from '../assets/images/Frame 35.png';
-import InvestBetter from '../assets/images/Frame 1000001583.png';
-import SpendBetterBig from '../assets/images/Frame 35-big.png';
-import InvestBetterBig from '../assets/images/Frame 89.png';
+
+import InvestBetter from '../assets/images/investbetter.png';
+
 import Smiles from '../assets/images/Frame 150.png';
 import SmilesBig from '../assets/images/Frame 150-big.png';
+import SpendBetter from '../assets/images/spendbetter.png';
 
 const FinancialPage = () => {
   return (
@@ -62,7 +62,7 @@ const FinancialPage = () => {
       </section>
       <section>
         <div className="green">
-          <p className="bigtext" >
+          <p className="bigtext">
             Smart investments, secure payments, and expert guidance, all in one
             place.
           </p>
@@ -76,10 +76,23 @@ const FinancialPage = () => {
           </p>
         </div>
         <div className="benefitimage">
-          <img src={SpendBetter} alt="" className="mobile" />
-          <img src={InvestBetter} alt="" className="mobile" />
-          <img src={SpendBetterBig} alt="" className="desktop" />
-          <img src={InvestBetterBig} alt="" className="desktop" />
+          <div className="card">
+            <h3>Spend better</h3>
+            <p>
+              Set and achieve financial goals with ease, automate your savings,
+              and watch your money grow without the stress.
+            </p>
+            <img src={SpendBetter} alt="" />
+          </div>
+
+          <div className="card">
+            <h3>Invest better</h3>
+            <p>
+              Set and achieve financial goals with ease, automate your savings,
+              and watch your money grow without the stress.
+            </p>
+            <img src={InvestBetter} alt="" />
+          </div>
         </div>
         <div className="reviews">
           <span>
